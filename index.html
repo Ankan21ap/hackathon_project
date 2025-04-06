@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduAccess - Breaking Financial Barriers to Education</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="local/edu.png" alt="" />
+          <h1>EduAccess</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#scholarships">Scholarships</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#mentorship">Mentorship</a></li>
+          <li><a href="#success-stories">Success Stories</a></li>
+          <li><a href="#donate" class="donate-btn">Donate</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <h1>Breaking Financial Barriers to Education</h1>
+          <p>
+            Connecting students with resources to ensure equal access to quality
+            education regardless of financial background.
+          </p>
+          <div class="hero-buttons">
+            <a href="#scholarships" class="btn primary-btn"
+              >Find Scholarships</a
+            >
+            <a href="#resources" class="btn secondary-btn">Explore Resources</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="local/body1.jpeg" alt="Students studying together" />
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="stats">
+        <div class="stat-item">
+          <h2>1000+</h2>
+          <p>Scholarships Listed</p>
+        </div>
+        <div class="stat-item">
+          <h2>5000+</h2>
+          <p>Students Helped</p>
+        </div>
+        <div class="stat-item">
+          <h2>$2M+</h2>
+          <p>Funds Raised</p>
+        </div>
+        <div class="stat-item">
+          <h2>300+</h2>
+          <p>Partner Institutions</p>
+        </div>
+      </section>
+
+      <!-- Scholarship Finder Section -->
+      <section id="scholarships" class="scholarships">
+        <div class="section-header">
+          <h2>Scholarship Finder</h2>
+          <p>
+            Find scholarships tailored to your educational needs and background
+          </p>
+        </div>
+        <div class="scholarship-finder">
+          <div class="filter-panel">
+            <h3>Filter Scholarships</h3>
+            <form id="scholarship-filter">
+              <div class="form-group">
+                <label for="education-level">Education Level</label>
+                <select id="education-level" name="education-level">
+                  <option value="">All Levels</option>
+                  <option value="high-school">High School</option>
+                  <option value="undergraduate">Undergraduate</option>
+                  <option value="graduate">Graduate</option>
+                  <option value="vocational">Vocational</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="field-of-study">Field of Study</label>
+                <select id="field-of-study" name="field-of-study">
+                  <option value="">All Fields</option>
+                  <option value="stem">STEM</option>
+                  <option value="humanities">Humanities</option>
+                  <option value="business">Business</option>
+                  <option value="arts">Arts</option>
+                  <option value="healthcare">Healthcare</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="amount">Minimum Amount</label>
+                <input
+                  type="range"
+                  id="amount"
+                  name="amount"
+                  min="0"
+                  max="10000"
+                  step="500"
+                  value="0"
+                />
+                <output for="amount">$0</output>
+              </div>
+              <div class="form-group">
+                <label for="deadline">Application Deadline</label>
+                <input type="date" id="deadline" name="deadline" />
+              </div>
+              <button type="submit" class="btn primary-btn">Search</button>
+              <button type="reset" class="btn secondary-btn">Reset</button>
+            </form>
+          </div>
+          <div class="scholarship-results">
+            <div id="scholarship-list">
+              <!-- Scholarship items will be populated by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resources Section -->
+      <section id="resources" class="resources">
+        <div class="section-header">
+          <h2>Financial Aid Resources</h2>
+          <p>
+            Comprehensive guides and tools to help you navigate financial aid
+            options
+          </p>
+        </div>
+        <div class="resources-grid">
+          <div class="resource-card">
+            <div class="resource-icon">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h3>FAFSA Guide</h3>
+            <p>
+              Step-by-step guide to completing the Free Application for Federal
+              Student Aid
+            </p>
+            <a href="#" class="resource-link">Learn More</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h3>Tuition Calculator</h3>
+            <p>Estimate your college costs and potential financial aid</p>
+            <a href="#" class="resource-link">Use Calculator</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon">
+              <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <h3>Grant Directory</h3>
+            <p>Comprehensive list of grants available for students</p>
+            <a href="#" class="resource-link">Browse Grants</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <h3>Textbook Assistance</h3>
+            <p>
+              Programs to help with textbook costs and educational materials
+            </p>
+            <a href="#" class="resource-link">Find Help</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon">
+              <i class="fas fa-laptop"></i>
+            </div>
+            <h3>Technology Access</h3>
+            <p>
+              Programs providing laptops and internet access to students in need
+            </p>
+            <a href="#" class="resource-link">Get Connected</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>Loan Forgiveness</h3>
+            <p>
+              Information on student loan forgiveness and repayment programs
+            </p>
+            <a href="#" class="resource-link">Explore Options</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mentorship Section -->
+      <section id="mentorship" class="mentorship">
+        <div class="section-header">
+          <h2>Connect with Mentors</h2>
+          <p>
+            Get guidance from professionals and educators who can help you
+            navigate your educational journey
+          </p>
+        </div>
+        <div class="mentorship-container">
+          <div class="mentorship-info">
+            <h3>Why Find a Mentor?</h3>
+            <ul>
+              <li>Get personalized guidance on financial aid applications</li>
+              <li>
+                Learn about scholarship opportunities from someone who's been
+                there
+              </li>
+              <li>Receive support for academic challenges</li>
+              <li>Build a professional network early in your career</li>
+              <li>Gain insights into your field of interest</li>
+            </ul>
+          </div>
+          <div class="mentor-signup">
+            <h3>Connect with a Mentor</h3>
+            <form id="mentor-form">
+              <div class="form-group">
+                <label for="student-name">Your Name</label>
+                <input
+                  type="text"
+                  id="student-name"
+                  name="student-name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="student-email">Email</label>
+                <input
+                  type="email"
+                  id="student-email"
+                  name="student-email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="education-interest">Educational Interest</label>
+                <select
+                  id="education-interest"
+                  name="education-interest"
+                  required
+                >
+                  <option value="">Select an option</option>
+                  <option value="stem">STEM</option>
+                  <option value="humanities">Humanities</option>
+                  <option value="business">Business</option>
+                  <option value="arts">Arts</option>
+                  <option value="healthcare">Healthcare</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="mentor-message">Message (Optional)</label>
+                <textarea
+                  id="mentor-message"
+                  name="mentor-message"
+                  rows="4"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn primary-btn">
+                Request Mentor
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="featured-mentors">
+          <h3>Featured Mentors</h3>
+          <div class="mentor-cards">
+            <div class="mentor-card">
+              <h4>Sarah Johnson</h4>
+              <p>Education Counselor</p>
+              <p>Specializes in scholarship applications and financial aid</p>
+            </div>
+            <div class="mentor-card">
+              <h4>David Chen</h4>
+              <p>STEM Professor</p>
+              <p>Guides students through STEM education pathways</p>
+            </div>
+            <div class="mentor-card">
+              <h4>Maria Rodriguez</h4>
+              <p>Financial Aid Expert</p>
+              <p>Helps navigate complex financial aid systems</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Success Stories Section -->
+      <section id="success-stories" class="success-stories">
+        <div class="section-header">
+          <h2>Success Stories</h2>
+          <p>
+            Read about students who overcame financial barriers to achieve their
+            educational goals
+          </p>
+        </div>
+        <div class="stories-container">
+          <div class="story-card">
+            <h3>James Wilson</h3>
+            <p class="story-subtitle">First-generation college graduate</p>
+            <p class="story-text">
+              "With the help of three scholarships I found through EduAccess, I
+              became the first person in my family to graduate college. Now I'm
+              pursuing my master's degree in engineering."
+            </p>
+          </div>
+          <div class="story-card">
+            <h3>Aisha Patel</h3>
+            <p class="story-subtitle">Medical school student</p>
+            <p class="story-text">
+              "After my parents lost their jobs during the pandemic, I thought
+              I'd have to give up on medical school. The financial resources and
+              mentorship I received through this platform changed everything."
+            </p>
+          </div>
+          <div class="story-card">
+            <h3>Miguel Sanchez</h3>
+            <p class="story-subtitle">Computer Science major</p>
+            <p class="story-text">
+              "The technology access program provided me with a laptop when I
+              couldn't afford one, and the mentorship program connected me with
+              a tech professional who helped me secure an internship."
+            </p>
+          </div>
+        </div>
+        <div class="share-story">
+          <h3>Share Your Success Story</h3>
+          <p>
+            Inspire others by sharing how you overcame financial barriers to
+            education
+          </p>
+          <button id="share-story-btn" class="btn primary-btn">
+            Share Your Story
+          </button>
+        </div>
+      </section>
+
+      <!-- Donation Section -->
+      <section id="donate" class="donate">
+        <div class="section-header">
+          <h2>Support Equal Access to Education</h2>
+          <p>
+            Your contribution helps students overcome financial barriers and
+            achieve their educational dreams
+          </p>
+        </div>
+        <div class="donation-container">
+          <div class="donation-info">
+            <h3>How Your Donation Helps</h3>
+            <ul>
+              <li>
+                <strong>$25</strong> provides educational materials for one
+                student
+              </li>
+              <li>
+                <strong>$100</strong> covers application fees for college
+                admissions
+              </li>
+              <li>
+                <strong>$500</strong> funds emergency financial assistance
+              </li>
+              <li>
+                <strong>$1,000</strong> creates a micro-scholarship for a
+                student in need
+              </li>
+            </ul>
+            <p>
+              100% of your donation goes directly to student support programs
+            </p>
+          </div>
+          <div class="donation-form">
+            <h3>Make a Donation</h3>
+            <form method="post" action="/donate" id="donate-form">
+              <label for="custom-amount">Enter Amount ($)</label>
+              <input type="number" id="custom-amount" name="amount" min="1" />
+
+              <div class="form-group">
+                <label for="donor-name">Name</label>
+                <input type="text" id="donor-name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="donor-email">Email</label>
+                <input type="email" id="donor-email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label>Donation Type</label>
+                <div class="radio-group">
+                  <input
+                    type="radio"
+                    id="one-time"
+                    name="mode"
+                    value="one-time"
+                    checked
+                  />
+                  <label for="one-time">One-time</label>
+                  <input
+                    type="radio"
+                    id="monthly"
+                    name="mode"
+                    value="monthly"
+                  />
+                  <label for="monthly">Monthly</label>
+                </div>
+              </div>
+              <button type="submit" class="btn primary-btn">Donate Now</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section class="newsletter">
+        <div class="newsletter-content">
+          <h2>Stay Updated</h2>
+          <p>
+            Subscribe to our newsletter for the latest scholarship opportunities
+            and resources
+          </p>
+          <form id="newsletter-form" class="newsletter-form">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit" class="btn primary-btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="footer-img">
+            <img src="local/edu.png" alt="img" />
+            <h2>EduAccess</h2>
+          </div>
+          <p>Breaking Financial Barriers to Education</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#scholarships">Scholarships</a></li>
+              <li><a href="#resources">Resources</a></li>
+              <li><a href="#mentorship">Mentorship</a></li>
+              <li><a href="#success-stories">Success Stories</a></li>
+              <li><a href="#donate">Donate</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Financial Aid Guide</a></li>
+              <li><a href="#">Scholarship Application Tips</a></li>
+              <li><a href="#">Student Loan Information</a></li>
+              <li><a href="#">Educational Grants</a></li>
+              <li><a href="#">Budget Planning</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>
+                <a href="mailto:info@eduaccess.org">info@eduaccess.org</a>
+              </li>
+              <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+              <li>123 Education Street, Suite 101</li>
+              <li>Knowledge City, KN 12345</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 EduAccess. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal for Success Story Submission -->
+    <div id="story-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Share Your Success Story</h2>
+        <form id="story-form">
+          <div class="form-group">
+            <label for="story-name">Your Name</label>
+            <input type="text" id="story-name" name="story-name" required />
+          </div>
+          <div class="form-group">
+            <label for="story-email">Email</label>
+            <input type="email" id="story-email" name="story-email" required />
+          </div>
+          <div class="form-group">
+            <label for="story-title">Story Title</label>
+            <input type="text" id="story-title" name="story-title" required />
+          </div>
+          <div class="form-group">
+            <label for="story-content">Your Story</label>
+            <textarea
+              id="story-content"
+              name="story-content"
+              rows="6"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="story-photo">Upload a Photo (Optional)</label>
+            <input
+              type="file"
+              id="story-photo"
+              name="story-photo"
+              accept="image/*"
+            />
+          </div>
+          <button type="submit" class="btn primary-btn">
+            Submit Your Story
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
